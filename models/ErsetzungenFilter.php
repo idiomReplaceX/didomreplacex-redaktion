@@ -28,6 +28,7 @@ class ErsetzungenFilter extends \yii\db\ActiveRecord
     {
         return [
             [['filtername'], 'string', 'max' => 50],
+            [['art'], 'string', 'max' => 20],
         ];
     }
 
@@ -38,12 +39,20 @@ class ErsetzungenFilter extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
+            'art' => 'Filter Typ',
             'filtername' => 'Filtername',
         ];
     }
     
     public static function listAll() {
         return ArrayHelper::map(self::find()->all(),"id","filtername");
+    }
+    
+    public static function listFilterArt() {
+        return [
+            "wort" => "Wörter ersetzen",
+            "zeichen" => "Zeichen ersetzen"
+        ];
     }
     
 }

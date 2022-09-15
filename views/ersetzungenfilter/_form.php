@@ -13,6 +13,8 @@ use yii\widgets\ActiveForm;
     <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'filtername')->textInput(['maxlength' => true]) ?>
+    
+    <?= $form->field($model, 'art')->dropDownList(app\models\ErsetzungenFilter::listFilterArt(),['maxlength' => true]); ?>
 
     <div class="form-group">
         <?= Html::submitButton('Save', ['class' => 'btn btn-success']) ?>

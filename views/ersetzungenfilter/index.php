@@ -25,6 +25,7 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'columns' => [
             'filtername',
+            'art',
             [
                 'class' => ActionColumn::className(),
                 'urlCreator' => function ($action, ErsetzungenFilter $model, $key, $index, $column) {
