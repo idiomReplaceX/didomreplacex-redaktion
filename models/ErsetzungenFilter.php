@@ -29,6 +29,7 @@ class ErsetzungenFilter extends \yii\db\ActiveRecord
         return [
             [['filtername'], 'string', 'max' => 50],
             [['art'], 'string', 'max' => 20],
+            [['autorin'], 'string', 'max' => 100],
         ];
     }
 
@@ -41,6 +42,7 @@ class ErsetzungenFilter extends \yii\db\ActiveRecord
             'id' => 'ID',
             'art' => 'Filter Typ',
             'filtername' => 'Filtername',
+            'autorin' => 'AutorIn',
         ];
     }
     
@@ -51,7 +53,8 @@ class ErsetzungenFilter extends \yii\db\ActiveRecord
     public static function listFilterArt() {
         return [
             "wort" => "Wörter ersetzen",
-            "zeichen" => "Zeichen ersetzen"
+            "zeichen" => "Zeichen ersetzen",
+            "kontamination" => "Kontaminieren"
         ];
     }
     
